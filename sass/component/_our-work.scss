@@ -10,11 +10,6 @@
   width: 100%;
   pointer-events: none;
 }
-@media screen and (max-width: 1119px) {
-  .our-work {
-    display: none;
-  }
-}
 .our-work {
   @extend %section;
   flex-wrap: wrap;

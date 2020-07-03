@@ -800,12 +800,6 @@ body {
   pointer-events: none;
 }
 
-@media screen and (max-width: 1119px) {
-  .our-work {
-    display: none;
-  }
-}
-
 .our-work {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
