@@ -1,0 +1,100 @@
+@mixin font-header($color-h) {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: $color-h;
+}
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+
+.navigate {
+  display: block;
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#current-page {
+  color: $accent-color;
+  position: relative;
+}
+#current-page::after {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: $accent-color;
+  border-radius: 4px;
+  height: 4px;
+  width: 100%;
+  content: '';
+}
+.navigation {
+  margin-left: 81px;
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  @extend %list;
+}
+.navigation-item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  & + .navigation-item {
+    margin-left: 50px;
+  }
+}
+.navigation-link {
+  @include font-header($primary-text-color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  @extend %link;
+}
+
+.mail-list {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  @extend %list;
+}
+.mail-item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  & + .mail-item {
+    margin-left: 50px;
+  }
+}
+.mail-link:hover .icon,
+.mail-link:focus .icon {
+  fill: $accent-color;
+}
+.mail-link {
+  @include font-header($description-text-color);
+  @extend %link;
+  position: relative;
+}
+
+.mail-list .icon {
+  @extend %icon;
+}
+#envelope {
+  left: -26px;
+  bottom: 33px;
+}
+#smartphone {
+  left: -20px;
+  bottom: 32px;
+}
